@@ -8,7 +8,7 @@ const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 
 const corsOptions = {
-    origin: 'https://crudvercel-k8cr.vercel.app/,
+    origin: 'https://crudvercel-k8cr.vercel.app,
     credentials: true,
     };
 // Load environment variables
