@@ -9,7 +9,14 @@ const Home = () => {
   // Fetch all products
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`${apiUrl}/products`);
+      const response = await fetch('https://crudvercel-mgg69bqlt-amna-razzaqs-projects.vercel.app/api/products', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${yourAuthToken}`,
+        'Content-Type': 'application/json',
+    },
+});
+
       if (response.ok) {
         const data = await response.json();
         setProducts(data); // Set fetched products to state
