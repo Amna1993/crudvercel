@@ -7,6 +7,10 @@ const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 
+const corsOptions = {
+    origin: 'https://crudvercel-k8cr.vercel.app/,
+    credentials: true,
+    };
 // Load environment variables
 dotenv.config();
 
@@ -22,7 +26,7 @@ console.log('MONGO_URI:', process.env.MONGO_URI);
 
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json()); // Built-in body parser
 app.use(bodyParser.json()); // Optional, you can remove if express.json() is sufficient
 
