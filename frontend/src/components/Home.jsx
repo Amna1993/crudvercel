@@ -9,7 +9,7 @@ const Home = () => {
   // Fetch all products
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://crudvercel-mgg69bqlt-amna-razzaqs-projects.vercel.app/api/products', {
+      const response = await fetch(`${apiUrl}/api/products`, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
