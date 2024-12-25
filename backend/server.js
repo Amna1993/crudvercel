@@ -8,7 +8,7 @@ const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 
 const corsOptions = {
-    origin: 'https://crudvercel-zf4b-8c4fegaeb-amna-razzaqs-projects.vercel.app/', // Correctly closed URL
+    origin: 'https://crudvercel-zf4b-83pgvua0f-amna-razzaqs-projects.vercel.app', // Correctly closed URL
     credentials: true,  // Allow credentials
 };
 
