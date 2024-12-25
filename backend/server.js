@@ -8,9 +8,10 @@ const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 
 const corsOptions = {
-    origin: 'https://crudvercel-k8cr.vercel.app,
-    credentials: true,
-    };
+    origin: 'https://crudvercel-k8cr.vercel.app', // Correctly closed URL
+    credentials: true,  // Allow credentials
+};
+
 // Load environment variables
 dotenv.config();
 
@@ -24,9 +25,8 @@ connectDB().catch((err) => {
 });
 console.log('MONGO_URI:', process.env.MONGO_URI);
 
-
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));  // Use the CORS middleware with the defined options
 app.use(express.json()); // Built-in body parser
 app.use(bodyParser.json()); // Optional, you can remove if express.json() is sufficient
 
