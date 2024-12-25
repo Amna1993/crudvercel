@@ -12,7 +12,6 @@ const Home = () => {
       const response = await fetch('https://crudvercel-mgg69bqlt-amna-razzaqs-projects.vercel.app/api/products', {
     method: 'GET',
     headers: {
-        'Authorization': `Bearer ${yourAuthToken}`,
         'Content-Type': 'application/json',
     },
 });
